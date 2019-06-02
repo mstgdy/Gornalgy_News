@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Gornalgy News - Reliable &amp; favorite</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body id="ide">
+    <!-- ##### Header Area Start ##### -->
+
+<script type="text/javascript">
+
+var userobj=<%-JSON.stringify(obj)%>;
+console.log(userobj);
+if(userobj.check==true){
+console.log(userobj.name);
+document.getElementById('ide').innerHTML=`<header class="header-area"  >
+        <!-- Top Header Area -->
+          <%include  partials/header.ejs %>
+    </header>`;
+
+
+}
+else{
+  console.log(userobj.name);
+document.getElementById('ide').innerHTML=`<header class="header-area"  >
+        <!-- Top Header Area -->
+<%include  partials/header2.ejs %>
+
+    </header>`;
+}
+
+</script>
+
+
+
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <div class="hero-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-8">
+                    <!-- Breaking News Widget -->
+
+
+                    <div class="breaking-news-area d-flex align-items-center">
+                        <div class="news-title">
+                            <p>WELCOME</p>
+                        </div>
+                        <div id="breakingNewsTicker" class="ticker">
+                            <ul id="go">
+
+                              <li><a href="#">Gornalgy News - Reliable &amp; favorite</a></li>
+
+                              <li><a href="#">If you want it , work for it . </a></li>
+                              <li><a href="#">Special thanks should be given to Eng. Amal Ibrahim for her efforts &amp; support</a></li>
+ <li><a href="#">special thanks should be given to Prof. Dr. mohammed El zewady for his Patience, ...... </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="breaking-news-area d-flex align-items-center mt-15" >
+                       <div class="news-title title2">
+                              <p>Egypt News</p>
+                          </div>
+                          <div id="internationalTicker" class="ticker">
+                              <ul>
+
+                                  <li><a href="#"><%=json.articles[0].title%></a></li>
+                                   <li><a href="#"><%=json.articles[1].title%></a></li>
+                                    <li><a href="#"><%=json.articles[2].title%></a></li>
+                                     <li><a href="#"><%=json.articles[3].title%></a></li>
+
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Hero Add -->
+                  <div class="col-12 col-lg-4">
+                      <div class="hero-add">
+                          <a href="#"><img src="img/bg-img/hero-add.gif" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ##### Hero Area End ##### -->
+
+      <!-- ##### Featured Post Area Start ##### -->
+      <div class="featured-post-area">
+
+          <div class="container">
+            <div class="section-heading">
+                              <h6>Popular News</h6>
+                          </div>
+              <div class="row">
+
+                  <div class="col-12 col-md-6 col-lg-8">
+                      <div class="row">
+
+                          <!-- Single Featured Post -->
+                          <div class="col-12 col-lg-7" id="post1bbc">
+                              <!-- post1bbc -->
+                          </div>
+
+                          <div class="col-12 col-lg-5" id="post2bbc">
+                              <!-- Single Featured Post -->
+                              <!-- post2bbc -->
+
+                              <!-- Single Featured Post -->
+                        <!-- post2bbc -->
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+                      <!-- Single Featured Post -->
+                      <div class="section-heading">
+                          <h6>General news</h6>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/19.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">BBC NEWS</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Nation Shall Speak Peace Unto Nation.</h6>
+                                  </a>
+                                  <form id='BBC-NEWS' method="get" action="/api/BBC-NEWS" onclick="thefollow('BBC-NEWS','UBBC-NEWS')" >
+                                   <button  >Follow</button>
+                                  </form>
+                                  <!-- unfollow -->
+                                  <form id='UBBC-NEWS' method="get" action="/apidel/BBC-NEWS" style="display:none" onclick="thefollow('UBBC-NEWS','BBC-NEWS')">
+                                   <button o >UNFollow</button>
+                                  </form>
+
+
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/20.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Al Jazeera English</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>News, analysis from the Middle East and worldwide, multimedia and interactives, opinions, documentaries, podcasts, long reads and broadcast schedule..</h6>
+                                  </a>
+                                    <form id='Al-Jazeera-English' method="get" action="/api/Al-Jazeera-English" onclick="thefollow('Al-Jazeera-English','UAl-Jazeera-English')">
+                                  <button >Follow</button>
+                                    </form>
+
+                                  <!--   unfollow -->
+
+                                   <form id='UAl-Jazeera-English' method="get" action="/apidel/Al-Jazeera-English" style="display:none" onclick="thefollow('UAl-Jazeera-English','Al-Jazeera-English')">
+                                  <button >UNFollow</button>
+                                    </form>
+
+
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/21.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">CNN</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN</h6>
+                                  </a>
+
+                                  <form id='CNN' method="get" action="/api/CNN"  onclick="thefollow('CNN','UCNN')">
+                                  <button>Follow</button>
+                                  </form>
+
+                               <!--   unfollow -->
+                                <form id='UCNN'  method="get" action="/apidel/CNN" style="display:none"  onclick="thefollow('UCNN','CNN')" >
+                                  <button>UNFollow</button>
+                                  </form>
+
+
+
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/22.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Daily Mail</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>All the latest news, sport, showbiz, science and health stories from around the world from the Daily Mail and Mail on Sunday newspapers..</h6>
+                                  </a>
+                                  <form id='Daily-Mail' method="get" action="/api/Daily-Mail" onclick="thefollow('Daily-Mail','UDaily-Mail')">
+                                  <button >Follow</button>
+                              </form>
+
+                            <!--   unfollow -->
+
+                              <form id='UDaily-Mail' method="get" action="/apidel/Daily-Mail" style="display:none" onclick="thefollow('UDaily-Mail','Daily-Mail')">
+                                  <button >UNFollow</button>
+                              </form>
+
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/23.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Google News</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Comprehensive, up-to-date news coverage, aggregated from sources all over the world by Google News.</h6>
+                                  </a>
+                                  <form id='Google-News' method="get" action="/api/Google-News" onclick="thefollow('Google-News','UGoogle-News')">
+                                  <button >Follow</button>
+                              </form>
+                             <!--  unfollow -->
+                             <form id='UGoogle-News' method="get" action="/apidel/Google-News" style="display:none" onclick="thefollow('UGoogle-News','Google-News')">
+                                  <button >UNFollow</button>
+                              </form>
+                                                            </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/24.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">The New York Times</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Find breaking news, multimedia & opinion on Washington</h6>
+                                  </a>
+                                  <form id='The-New-York-Times' method="get" action="/api/The-New-York-Times" onclick="thefollow('The-New-York-Times','UThe-New-York-Times')">
+                                  <button >Follow</button>
+                                  </form>
+                                 <!--  unfollow -->
+                                 <form id='UThe-New-York-Times'  method="get" action="/apidel/The-New-York-Times" style="display:none" onclick="thefollow('UThe-New-York-Times','The-New-York-Times')">
+                                  <button >UNFollow</button>
+                                  </form>
+                                                            </div>
+                          </div>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/23.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Google News (Saudi Arabia)</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>تغطية شاملة ومتجددة للأخبار، تم جمعها من مصادر أخبار من جميع أنحاء العالم بواسطة أخبار Google. </h6>
+                                  </a>
+                                  <form id='Google-News-(Saudi-Arabia)' method="get" action="/api/Google-News-(Saudi-Arabia)" onclick="thefollow('Google-News-(Saudi-Arabia)','UGoogle-News-(Saudi-Arabia)')">
+                                  <button >Follow</button>
+                                   </form>
+                                  <!--  unfollow -->
+
+                                   <form id='UGoogle-News-(Saudi-Arabia)' method="get" action="/apidel/Google-News-(Saudi-Arabia)" style="display:none" onclick="thefollow('UGoogle-News-(Saudi-Arabia)','Google-News-(Saudi-Arabia)')">
+                                  <button >UNFollow</button>
+                                   </form>
+
+                                                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+          <div>"    "</div>
+      <!-- ##### Featured Post Area End ##### -->
+      <!-- ##### Featured Post Area Start ##### -->
+      <div class="featured-post-area">
+
+          <div class="container">
+            <div class="section-heading">
+                              <h6>Popular News</h6>
+                          </div>
+              <div class="row">
+
+                  <div class="col-12 col-md-6 col-lg-8">
+                      <div class="row">
+
+                          <!-- Single Featured Post -->
+                          <div class="col-12 col-lg-7" id="post1arc">
+                        <!-- post1arc -->
+                          </div>
+
+                          <div class="col-12 col-lg-5" id="post2arc">
+                              <!-- Single Featured Post -->
+                            <!-- post2arc -->
+                              <!-- Single Featured Post -->
+                          <!-- post3arc -->
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+                      <!-- Single Featured Post -->
+                      <div class="section-heading">
+                          <h6>Technology news</h6>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/100.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Ars Technica</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>The PC enthusiast's resource. Power users and the tools they love, without computing religion..</h6>
+                                  </a>
+                                  <form id='Ars-Technica' method="get" action="/api/Ars-Technica" onclick="thefollow('Ars-Technica','UArs-Technica')">
+                                  <button >Follow</button>
+                                    </form>
+                                  <!--   unfollow -->
+                                   <form id='UArs-Technica' method="get" action="/apidel/Ars-Technica" style="display:none"onclick="thefollow('UArs-Technica','Ars-Technica')">
+                                  <button >UNFollow</button>
+                                    </form>
+                                                            </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/101.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Engadget</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics.</h6>
+                                  </a>
+                                  <form id='Engadget' method="get" action="/api/Engadget" onclick="thefollow('Engadget','UEngadget')">
+                                  <button  >Follow</button>
+                                    </form>
+                                  <!--   unfollow -->
+                                   <form id='UEngadget' method="get" action="/apidel/Engadget" style="display:none" onclick="thefollow('UEngadget','Engadget')">
+                                  <button >UNFollow</button>
+                                    </form>
+                                                            </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/102.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Hacker News</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Hacker News is a social news website focusing on computer science and entrepreneurship. It is run by Paul Graham's investment fund and startup incubator, Y Combinator. In general, content that can be submitted is defined as "anything that gratifies one's intellectual curiosity".</h6>
+                                  </a>
+                                  <form id='Hacker-News' method="get" action="/api/Hacker-News" onclick="thefollow('Hacker-News','UHacker-News')">
+                                  <button >Follow</button>
+                                  </form>
+                                  <!-- unfollow -->
+                                  <form id='UHacker-News' method="get" action="/apidel/Hacker-News" style="display:none" onclick="thefollow('UHacker-News','Hacker-News')">
+                                  <button >UNFollow</button>
+                                  </form>
+                                                            </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/103.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">TechCrunch</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.</h6>
+                                  </a>
+                                  <form id='TechCrunch' method="get" action="/api/TechCrunch" onclick="thefollow('TechCrunch','UTechCrunch')">
+                                  <button >Follow</button>
+                                      </form>
+                                      <!-- unfollow -->
+                                       <form id='UTechCrunch' method="get" action="/apidel/TechCrunch" style="display:none" onclick="thefollow('UTechCrunch','TechCrunch')">
+                                  <button >UNFollow</button>
+                                      </form>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/104.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">TechRadar</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>The latest technology news and reviews, covering computing, home entertainment systems, gadgets and more.</h6>
+                                  </a>
+                                  <form id='TechRadar' method="get" action="/api/TechRadar" onclick="thefollow('TechRadar','UTechRadar')">
+                                  <button >Follow</button>
+                                    </form>
+                                    <!-- unfollow -->
+                                       <form id='UTechRadar' method="get" action="/apidel/TechRadar"style="display:none" onclick="thefollow('UTechRadar','TechRadar')">
+                                  <button >UNFollow</button>
+                                    </form>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Single Featured Post -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/105.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">The Verge</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>The Verge covers the intersection of technology, science, art, and culture.</h6>
+                                  </a>
+                                  <form id='The-Verge' method="get" action="/api/The-Verge" onclick="thefollow('The-Verge','UThe-Verge')">
+                                  <button >Follow</button>
+                                   </form>
+                                   <!-- unfollow -->
+                                    <form id='UThe-Verge' method="get" action="/apidel/The-Verge" style="display:none" onclick="thefollow('UThe-Verge','The-Verge')">
+                                  <button >UNFollow</button>
+                                   </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ##### Featured Post Area End ##### -->
+      <!-- ##### Popular News Area Start ##### -->
+      <div class="popular-news-area section-padding-80-50">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 col-lg-8">
+                      <div class="section-heading">
+                          <h6>Popular News</h6>
+                      </div>
+
+                      <div class="row">
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-md-6" id="post1bbcsports">
+                        <!-- post1bbcsports -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-md-6" id="post2bbcsports" >
+                        <!-- post2bbcsports -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-md-6" id="post3bbcsports">
+                            <!-- post3bbcsports -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-md-6" id="post4bbcsports">
+                            <!-- post4sports -->
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-lg-4">
+                      <div class="section-heading">
+                          <h6>Sports news</h6>
+                      </div>
+                      <!-- Popular News Widget -->
+              <!--     <div class="popular-news-widget mb-30">-->
+                        <div id="mostafa">  <h3 id = "mos"> Best Quote </h3>
+
+                          <!-- Single Popular Blog -->
+                          <div class="single-popular-post">
+                              <a href="#">
+                                  <h6> “ Soon, when all is well, you're going to look back on this period of your life and be so glad that you never gave up. ” </h6>
+                              </a>
+                              <p>Brittany Burgunder </p>
+                          </div>
+                        </div>
+
+
+
+
+                      <!-- Newsletter Widget -->
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/110.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">BBC Sport</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>The home of BBC Sport online. Includes live sports coverage, breaking news, results, video, audio and analysis on Football, F1, Cricket, Rugby Union, Rugby League, Golf, Tennis and all the main world sports, plus major events such as the Olympic Games.</h6>
+                                  </a>
+                                  <form id='BBC-Sport' method="get" action="/api/BBC-Sport" onclick="thefollow('BBC-Sport','UBBC-Sport')">
+                                  <button >Follow</button>
+                                    </form>
+                                    <!-- unfollow -->
+                                     <form id='UBBC-Sport' method="get" action="/apidel/BBC-Sport" style="display:none" onclick="thefollow('UBBC-Sport','BBC-Sport')">
+                                  <button >UNFollow</button>
+                                    </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/111.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">TalkSport</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Tune in to the world's biggest sports radio station - Live Premier League football coverage, breaking sports news, transfer rumours &amp; exclusive interviews.</h6>
+                                  </a>
+                                  <form id='TalkSport' method="get" action="/api/TalkSport" onclick="thefollow('TalkSport','UTalkSport')">
+                                  <button >Follow</button>
+                                   </form>
+                                   <!-- unfollow -->
+                                   <form id='UTalkSport' method="get" action="/apidel/TalkSport" style="display:none" onclick="thefollow('UTalkSport','TalkSport')">
+                                  <button >UNFollow</button>
+                                   </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/112.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">FourFourTwo</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>The latest football news, in-depth features, tactical and statistical analysis from FourFourTwo, the UK&#039;s favourite football monthly.</h6>
+                                  </a>
+                                  <form id='FourFourTwo' method="get" action="/api/FourFourTwo" onclick="thefollow('FourFourTwo','UFourFourTwo')">
+                                  <button >Follow</button>
+                                     </form>
+                                     <!-- unfollow -->
+                                       <form id='UFourFourTwo' method="get" action="/apidel/FourFourTwo" style="display:none" onclick="thefollow('UFourFourTwo','FourFourTwo')">
+                                  <button >UNFollow</button>
+                                     </form>
+                              </div>
+                          </div>
+                      </div>
+
+                        <!--  <h4>Newsletter</h4>
+                          <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                          <form action="#" method="post">
+                              <input type="text" name="text" placeholder="Name">
+                              <input type="email" name="email" placeholder="Email">
+                              <button type="submit" class="btn w-100">Subscribe</button>
+                          </form>-->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ##### Popular News Area End ##### -->
+
+      <!-- ##### Video Post Area Start ##### -->
+      <div class="video-post-area bg-img bg-overlay" style="background-image: url(img/bg-img/bg1.jpg);">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <!-- Single Video Post -->
+                  <div class="col-12 col-sm-6 col-md-4">
+                      <div class="single-video-post">
+                          <img src="img/bg-img/video1.jpg" alt="">
+                          <!-- Video Button -->
+                          <div class="videobtn">
+                              <!--<a href="https://www.youtube.com/watch?v=5BQr-j3BBzU" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>-->
+                              <iframe width="380" height="280" src="https://www.youtube.com/embed/qIZbVkgTA7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Single Video Post -->
+                  <div class="col-12 col-sm-6 col-md-4">
+                      <div class="single-video-post">
+                          <img src="img/bg-img/video2.jpg" alt="">
+                          <!-- Video Button -->
+                          <div class="videobtn">
+                           <!--    <a href="https://www.youtube.com/watch?v=5BQr-j3BBzU" class="videoPlayer"><i class="fa fa-play" aria-hidden="true"></i></a>-->
+                            <iframe width="380" height="280" src="https://www.youtube.com/embed/QQLv15h7ve4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Single Video Post -->
+                  <div class="col-12 col-sm-6 col-md-4">
+                      <div class="single-video-post">
+                          <img src="img/bg-img/video3.jpg" alt="">
+                          <!-- Video Button -->
+                          <div class="videobtn">
+                            <iframe width="380" height="280" src="https://www.youtube.com/embed/JYEN87fbs08" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ##### Video Post Area End ##### -->
+
+      <!-- ##### Editorial Post Area Start ##### -->
+      <div class="editors-pick-post-area section-padding-80-50">
+          <div class="container">
+              <div class="row">
+                  <!-- Editors Pick -->
+                  <div class="col-12 col-md-7 col-lg-9">
+                      <div class="section-heading">
+                          <h6>Editor’s Pick</h6>
+                      </div>
+
+                      <div class="row">
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-lg-4" id="post1business">
+                              <!-- post1business -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-lg-4" id="post2business">
+                          <!-- post2business -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-lg-4" id="post3business">
+                        <!-- post3business -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-lg-4" id="post4business">
+                            <!-- post4business -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-lg-4" id="post5business">
+                              <!-- post5business -->
+                          </div>
+
+                          <!-- Single Post -->
+                          <div class="col-12 col-lg-4" id="post6business">
+                            <!-- post6business -->
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- World News -->
+                  <div class="col-12 col-md-5 col-lg-3">
+                      <div class="section-heading">
+                          <h6>Miscellaneous News</h6>
+                      </div>
+
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/120.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Business Insider</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Business Insider is a fast-growing business site with deep financial, media, tech, and other industry verticals. Launched in 2007, the site is now the largest business news site on the web.</h6>
+                                  </a>
+
+                                  <form id='Business-Insider' method="get" action="/api/Business-Insider" onclick="thefollow('Business-Insider','UBusiness-Insider')">
+                                  <button >Follow</button>
+                                   </form>
+                                   <!-- unfollow -->
+                                    <form id='UBusiness-Insider' method="get" action="/apidel/Business-Insider" style="display:none" onclick="thefollow('UBusiness-Insider','Business-Insider')">
+                                  <button >UNFollow</button>
+                                   </form>
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/121.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">Buzzfeed</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>BuzzFeed is a cross-platform, global network for news and entertainment that generates seven billion views each month.</h6>
+                                  </a>
+                                  <form id='Buzzfeed' method="get" action="/api/Buzzfeed" onclick="thefollow('Buzzfeed','UBuzzfeed')">
+                                  <button >Follow</button>
+                                   </form>
+                                   <!-- unfollow -->
+                                    <form id='UBuzzfeed' method="get" action="/apidel/Buzzfeed" style="display:none" onclick="thefollow('UBuzzfeed','Buzzfeed')">
+                                  <button >UNFollow</button>
+                                   </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/122.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">IGN</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>IGN is your site for Xbox One, PS4, PC, Wii-U, Xbox 360, PS3, Wii, 3DS, PS Vita and iPhone games with expert reviews, news, previews, trailers, cheat codes, wiki guides and walkthroughs.</h6>
+                                  </a>
+                                  <form id='IGN' method="get" action="/api/IGN" onclick="thefollow('IGN','UIGN')">
+                                  <button >Follow</button>
+                                    </form>
+                                    <!-- unfollow -->
+                                    <form id='UIGN' method="get" action="/apidel/IGN" style="display:none" onclick="thefollow('UIGN','IGN')">
+                                  <button >UNFollow</button>
+                                    </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-blog-post small-featured-post d-flex">
+                          <div class="post-thumb">
+                              <a href="#"><img src="img/bg-img/123.jpg" alt=""></a>
+                          </div>
+                          <div class="post-data">
+                              <a href="#" class="post-catagory">National Geographic</a>
+                              <div class="post-meta">
+                                  <a href="#" class="post-title">
+                                      <h6>Reporting our world daily: original nature and science news from National Geographic.</h6>
+                                  </a>
+                                  <form id='National-Geographic' method="get" action="/api/National-Geographic" onclick="thefollow('National-Geographic','UNational-Geographic')">
+                                  <button >Follow</button>
+                                    </form>
+                                    <!-- unfollow -->
+                                     <form id='UNational-Geographic' method="get" action="/apidel/National-Geographic" style="display:none" onclick="thefollow('UNational-Geographic','National-Geographic')">
+                                  <button >UNFollow</button>
+                                    </form>
+                              </div>
+                          </div>
+                      </div>
+
+          </div>
+      </div>
+      <!-- ##### Editorial Post Area End ##### -->
+
+      <!-- ##### Footer Add Area Start ##### -->
+      <div class="footer-add-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="footer-add">
+                          <a href="#"><img src="img/bg-img/footer-add.gif" alt=""></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ##### Footer Add Area End ##### -->
+
+      <!-- ##### Footer Area Start ##### -->
+      <footer class="footer-area">
+
+          <%include  partials/footer.ejs %>
+      </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <!-- fetch js file -->
+    <script src="js/fetch.js"></script>
+    <!-- sider js file -->
+    <!--   <script src="js/slider.js"></script> -->
+    <script>
+var userdata=<%-JSON.stringify(json)%>;
+
+var y=<%-JSON.stringify(data)%>;
+console.log(y);
+var channels=new Array('BBC-NEWS','Al-Jazeera-English','CNN','Daily-Mail','Google-News','The-New-York-Times','Google-News-(Saudi-Arabia)','Ars-Technica','Engadget','Hacker-News','TechCrunch','TechRadar','The-Verge','BBC-Sport','TalkSport','FourFourTwo','Business-Insider','Buzzfeed','IGN','National-Geographic');
+var uchannels=new Array('UBBC-NEWS','UAl-Jazeera-English','UCNN','UDaily-Mail','UGoogle-News','UThe-New-York-Times','UGoogle-News-(Saudi-Arabia)','UArs-Technica','UEngadget','UHacker-News','UTechCrunch','UTechRadar','UThe-Verge','UBBC-Sport','UTalkSport','UFourFourTwo','UBusiness-Insider','UBuzzfeed','UIGN','UNational-Geographic');
+
+for(i=0;i<=y.length;i++){
+for(j=0;j<=channels.length;j++){
+
+  if(y[i]==channels[j]){
+thefollow(channels[j],uchannels[j]);
+
+  }
+}
+
+}
+function thefollow(x1,x2){
+document.getElementById(x1).style.display='none';
+document.getElementById(x2).style.display='block';
+
+
+}
+
+
+
+
+
+    </script>
+</body>
+
+</html>
