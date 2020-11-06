@@ -1,11 +1,4 @@
-/**
- * Thank you for viewing this tuorial.
- *
- * Aman Kharbanda
- * YouTube: https://bit.ly/2EudQ5Z
- */
-
-
+//Created By Mostafa Magdy 
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
