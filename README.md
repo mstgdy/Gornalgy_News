@@ -1,4 +1,4 @@
- # **[Gornalgy News]**
+  **[Gornalgy News]**
 **A website shows the News from different resources Like**
 
 - BBC NEWS
